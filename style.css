@@ -161,7 +161,7 @@ main
 
 .main-exchange-container--title p
 {
-    margin-bottom: 48px;
+    margin-bottom: 28px;
     font-size: 1.4rem;
     text-align: center;
     color: #757575;
@@ -169,8 +169,29 @@ main
     line-height: 1.8rem;
 }
 
+.main-table-container
+{   
+    display: flex;
+    height: 400px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type:  x proximity;
+}
+
+.main-table-container::-webkit-scrollbar
+{   
+    background-color: var(--soft-orange);
+    height: 3px;
+}
+
+.main-table-container::-webkit-scrollbar-thumb
+{
+    background-color: var(--secondary-blue);
+}
+
 .main-currency-table, .main-comision-table
 {
+    scroll-snap-align: center;
     width: 70%;
     min-width: 235px;
     max-width: 500px;
@@ -186,7 +207,6 @@ main
     font-weight: bold;
     line-height: 2.3rem;
     color: var(--bitcoin-orange);
-    margin-right: 165px;
 }
 
 .currency-table__container, .comision-table__container
@@ -288,13 +308,11 @@ main
 
 .main-comision-table .comision-table__title
 {
-    margin-top: 15px;
     margin-bottom: 18px;
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 2.3rem;
     color: var(--secondary-blue);
-    margin-right: 165px;
 }
 
 .comision-table__date
@@ -361,7 +379,7 @@ main
 {
     width: 90%;
     min-width: 288px;
-    max-width: 400px;
+    max-width: 360px;
     height: 150px;
     margin: 15px auto;
     padding: 15px;
@@ -505,7 +523,7 @@ main
     position: relative;
     scroll-snap-align: center;
     width: 70%;
-    min-width: 220px;
+    min-width: 203px;
     max-width: 300px;
     height: 240px;
     margin: 50px auto 0;
@@ -548,6 +566,11 @@ main
     font-weight: 500;
     padding-bottom: 5px;
     color: var(--just-white);
+}
+
+.plans-card__description
+{
+    height: 202px;
 }
 
 
@@ -596,7 +619,7 @@ main
     font-size: 5.2rem;
     line-height: 5.3rem;
     font-weight: 500;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     color: var(--black);
 }
 
@@ -658,3 +681,38 @@ main
     vertical-align: text-bottom;
 }
 
+footer
+{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section
+{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left ul
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.footer-left li
+{
+    margin: 10px 0;
+}
+
+.footer-left a
+{
+    text-decoration: none;
+    color: var(--just-white);
+    cursor: pointer;
+}
