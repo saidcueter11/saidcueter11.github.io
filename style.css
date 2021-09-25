@@ -172,7 +172,9 @@ main
 .main-table-container
 {   
     display: flex;
+    gap: 20px;
     height: 400px;
+    padding: 0 20px 0;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type:  x proximity;
